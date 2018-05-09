@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项擦</title>
+<style>
+		*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.tabus{
+	margin: 50px auto;
+	width: 400px;
+	height: 400px;
+	background:url('img/timg (1).jpg') no-repeat bottom center;
+}
+ul{
+
+	width: 400px;
+	height: 50px;
+}
+.list .content{
+	border: 2px solid rgba(0, 0, 0,.3);
+	border-bottom: none;
+}
+.list li{
+	cursor: pointer;
+	box-sizing: border-box;
+	width: 100px;
+	height: 50px;
+	border-bottom: 2px solid rgba(0, 0, 0,.3);
+	float: left;
+	text-align: center;
+	line-height: 50px;
+
+}
+
+.news{
+	width: 400px;
+	height: 350px;
+	border: 2px solid rgba(0, 0, 0,.3);
+	border-top: none;
+	box-sizing: border-box;
+	position: relative;
+
+}
+.news div{
+	width: 400px;
+	height: 350px;
+	font-size:20px;
+	padding: 50px;
+	position: absolute;
+	top: 0;
+	display: none;
+}
+.news .show{
+	display:block;
+}
+
+</style>
+</head>
+<body>
+	<div class="tabus">
+		<ul class="list">
+			<li class="content">采薇</li>
+			<li>回乡偶书</li>
+			<li>明日歌</li>
+			<li>己亥岁</li>
+		</ul>
+<div class="news">
+	<div class="new show">
+	昔我往矣，杨柳依依；
+  <br>
+  今我来思，雨雪霏霏。
+</div>
+	<div class="new ">
+		少小离家老大回，相信无改鬓毛衰。
+		  <br>
+		儿童相见不相识，笑问客从何处来。
+	</div>
+	<div class="new">
+   明日复明日，明日何其多。
+   <br>
+   我生待明日，万事成蹉跎。
+   <br>
+ 世人若被明日累，春去秋来老将至。
+	</div>
+	<div class="new">
+		泽国江山入战图，生民何计乐樵苏。
+		  <br>
+		凭君莫话封侯事，一将成名万骨枯。
+	</div>
+</div>
+	</div>
+	<script src="jquery.min.js"></script>
+	<script>
+$('.tabus').find('li').click(function() {
+$(this).addClass('content').siblings().removeClass('content');
+$('.new').eq($(this).index()).addClass('show').siblings().removeClass('show');
+});
+	</script>
+</body>
+</html>
